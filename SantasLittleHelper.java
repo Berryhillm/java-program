@@ -71,8 +71,10 @@
  	//Calcs Method
  	public static void calcs() {
  		cSub = (cPrice1 + cPrice2);
- 		cTax = (cSub * .07);
- 		cTotal = (cSub + cTax);
+		cDiscount = (cSub * .2);
+		cNewSub = (cSub - cDiscount);
+ 		cTax = (cNewSub * .07);
+ 		cTotal = (cNewSub + cTax);
  	}
  	
  	//Output Method
@@ -88,7 +90,7 @@
 		System.out.println(" ");
 		System.out.println("Cost of toy number 2: " + dF1.format(cPrice2));
 		System.out.println(" ");
-		System.out.println("Subtotal: " + dF1.format(cSub));
+		System.out.println("Subtotal With a 20% Discount: " + dF1.format(cNewSub));
 		System.out.println(" ");
 		System.out.println("Tax: " + dF1.format(cTax));
 		System.out.println(" ");
